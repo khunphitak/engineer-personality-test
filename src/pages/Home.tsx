@@ -3,7 +3,6 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { engineerTypes, localizeType } from '../data/types'
 import { useLang } from '../context/LangContext'
-import heroBanner from '../assets/hero-banner.png'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -15,8 +14,50 @@ export default function Home() {
       <Nav />
 
       {/* HERO */}
-      <section className="relative overflow-hidden cursor-pointer" onClick={() => navigate('/test')}>
-        <img src={heroBanner} alt="Hero Banner" className="w-full block" />
+      <section
+        className="relative overflow-hidden cursor-pointer bg-gradient-to-br from-[#2d1b6e] via-[#4a2d8f] to-[#6B46C1]"
+        onClick={() => navigate('/test')}
+      >
+        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+          {/* Left character */}
+          <div className="hidden md:block w-48 lg:w-56 flex-shrink-0">
+            <img src="/hero-icon.png" alt="" className="w-full drop-shadow-2xl" />
+          </div>
+
+          {/* Center content */}
+          <div className="flex-1 text-center">
+            <span className="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
+              {t('home.badge')}
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+              {t('home.hero.title1')}<br />
+              <span className="text-yellow-300">{t('home.hero.title2')}</span>
+            </h1>
+            <p className="text-purple-200 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
+              {t('home.hero.subtitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <button
+                className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3.5 rounded-full transition-all hover:scale-105 hover:shadow-xl text-sm"
+                onClick={e => { e.stopPropagation(); navigate('/test') }}
+              >
+                {t('home.hero.cta')}
+              </button>
+              <span className="text-purple-300 text-xs">{t('home.hero.time')}</span>
+            </div>
+          </div>
+
+          {/* Right character */}
+          <div className="hidden md:block w-48 lg:w-56 flex-shrink-0">
+            <img src="/hero-icon-right.png" alt="" className="w-full drop-shadow-2xl" />
+          </div>
+        </div>
+
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-20 -right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl" />
+        </div>
       </section>
 
       {/* STATS */}
