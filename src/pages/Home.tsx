@@ -19,11 +19,6 @@ export default function Home() {
         onClick={() => navigate('/test')}
       >
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-          {/* Left character */}
-          <div className="hidden md:block w-48 lg:w-56 flex-shrink-0">
-            <img src="/hero-icon.png" alt="" className="w-full drop-shadow-2xl" />
-          </div>
-
           {/* Center content */}
           <div className="flex-1 text-center">
             <span className="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
@@ -47,10 +42,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right character */}
-          <div className="hidden md:block w-48 lg:w-56 flex-shrink-0">
-            <img src="/hero-icon-right.png" alt="" className="w-full drop-shadow-2xl" />
-          </div>
+
         </div>
 
         {/* Background decoration */}
