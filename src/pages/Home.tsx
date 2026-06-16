@@ -3,6 +3,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { engineerTypes, localizeType } from '../data/types'
 import { useLang } from '../context/LangContext'
+import heroBg from '../assets/hero-bg.png'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -15,7 +16,8 @@ export default function Home() {
 
       {/* HERO */}
       <section
-        className="relative overflow-hidden cursor-pointer bg-gradient-to-br from-[#2d1b6e] via-[#4a2d8f] to-[#6B46C1]"
+        className="relative overflow-hidden cursor-pointer"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         onClick={() => navigate('/test')}
       >
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
