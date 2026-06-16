@@ -28,14 +28,14 @@ export default function Home() {
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
               {t('home.hero.title1')}<br />
-              <span className="text-yellow-300">{t('home.hero.title2')}</span>
+              <span className="text-pink-300">{t('home.hero.title2')}</span>
             </h1>
             <p className="text-purple-200 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <button
-                className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3.5 rounded-full transition-all hover:scale-105 hover:shadow-xl text-sm"
+                className="bg-pink-400 hover:bg-pink-300 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:scale-105 hover:shadow-xl text-sm"
                 onClick={e => { e.stopPropagation(); navigate('/test') }}
               >
                 {t('home.hero.cta')}
