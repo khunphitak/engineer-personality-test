@@ -50,7 +50,7 @@ export default function Home() {
             ].map(card => (
               <div key={card.step} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${card.color} mb-5`}>{card.icon}</div>
-                <div className="text-xs font-bold text-gray-400 tracking-widest mb-2">STEP {card.step}</div>
+                <div className="text-xs font-bold text-gray-400 tracking-widest mb-2">{t('home.how.step')} {card.step}</div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`home.how.${card.tKey}.title`)}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{t(`home.how.${card.tKey}.desc`)}</p>
               </div>

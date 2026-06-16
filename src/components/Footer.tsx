@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           {[
             { key: 'footer.product',    items: [{ label: t('nav.takeTest'), to: '/test' }, { label: t('nav.types'), to: '/types' }] },
-            { key: 'footer.resources',  items: [{ label: 'Career Guide', to: '#' }, { label: 'Team Analysis', to: '#' }] },
-            { key: 'footer.help',       items: [{ label: 'FAQ', to: '#' }, { label: 'Support', to: '#' }] },
-            { key: 'footer.about',      items: [{ label: 'Our Mission', to: '#' }, { label: 'Research', to: '#' }] },
+            { key: 'footer.resources',  items: [{ label: t('footer.careerGuide'), to: '#' }, { label: t('footer.teamAnalysis'), to: '#' }] },
+            { key: 'footer.help',       items: [{ label: t('footer.faq'), to: '#' }, { label: t('footer.support'), to: '#' }] },
+            { key: 'footer.about',      items: [{ label: t('footer.mission'), to: '#' }, { label: t('footer.research'), to: '#' }] },
           ].map(col => (
             <div key={col.key}>
               <h4 className="text-white font-semibold text-sm mb-4">{t(col.key)}</h4>
