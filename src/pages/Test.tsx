@@ -196,7 +196,7 @@ export default function Test() {
         <QuoteMark />
 
         {/* Question text */}
-        <h1 className="text-center text-2xl sm:text-3xl font-bold text-purple-900 leading-relaxed mb-2 max-w-3xl mx-auto px-4">
+        <h1 className="text-center text-2xl sm:text-3xl font-bold text-gray-900 leading-relaxed mb-2 max-w-3xl mx-auto px-4">
           {questionText}
         </h1>
 
