@@ -49,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <button
               className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-2xl text-base"
-              style={{ background: 'linear-gradient(90deg, #ff6b35, #e91e8c)' }}
+              style={{ background: 'linear-gradient(90deg, #7c3aed, #c026d3, #e91e8c)' }}
               onClick={e => { e.stopPropagation(); navigate('/test') }}
             >
               <span className="text-xl">⛑️</span>
