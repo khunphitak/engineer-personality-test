@@ -16,11 +16,17 @@ export default function Home() {
 
       {/* HERO */}
       <section
-        className="relative overflow-hidden cursor-pointer"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="relative overflow-hidden cursor-pointer flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          width: '100%',
+          aspectRatio: '1765 / 891',
+        }}
         onClick={() => navigate('/test')}
       >
-        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
           {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-5 py-2 rounded-full mb-6 tracking-wide border border-white/20">
             <span>✨</span>
