@@ -48,11 +48,31 @@ export default function Home() {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <button
-              className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 hover:shadow-2xl text-base"
-              style={{ background: 'linear-gradient(90deg, #7c3aed, #c026d3, #e91e8c)' }}
+              className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-2xl transition-all hover:scale-105 hover:brightness-110 text-base"
+              style={{
+                background: 'linear-gradient(90deg, #1a0a40, #3b1580)',
+                border: '2px dashed #8b6fe0',
+                boxShadow: '0 0 20px rgba(124, 92, 224, 0.5)',
+              }}
               onClick={e => { e.stopPropagation(); navigate('/test') }}
             >
-              <span className="text-xl">⛑️</span>
+              {/* Helmet + Gear Icon */}
+              <svg width="36" height="36" viewBox="0 0 38 38" fill="none">
+                {/* Helmet dome */}
+                <path d="M7 26C5 26 4 24 4 22C4 13 10.7 5 19 5C27.3 5 34 13 34 22C34 24 33 26 31 26H7Z" fill="white"/>
+                {/* Helmet brim */}
+                <rect x="2" y="26" width="34" height="6" rx="3" fill="white"/>
+                {/* Gear on helmet */}
+                <g transform="translate(19, 17)">
+                  {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                    <rect key={i} x="-1.5" y="-8" width="3" height="5" rx="1"
+                      fill="rgba(30,10,80,0.55)"
+                      transform={`rotate(${angle})`}/>
+                  ))}
+                  <circle r="5.5" fill="rgba(30,10,80,0.55)"/>
+                  <circle r="2.5" fill="white"/>
+                </g>
+              </svg>
               {t('home.hero.cta')}
             </button>
           </div>
