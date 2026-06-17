@@ -80,8 +80,6 @@ export default function Home() {
           {/* Time info */}
           <div className="flex items-center gap-5 text-white/70 text-sm mt-5">
             <span className="flex items-center gap-1.5">🕐 {t('home.hero.time')}</span>
-            <span className="opacity-50">·</span>
-            <span className="flex items-center gap-1.5">🕐 {t('home.hero.duration')}</span>
           </div>
         </div>
 
