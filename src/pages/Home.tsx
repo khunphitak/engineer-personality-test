@@ -20,29 +20,41 @@ export default function Home() {
         style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         onClick={() => navigate('/test')}
       >
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-          {/* Center content */}
-          <div className="flex-1 text-center">
-            <span className="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
-              {t('home.badge')}
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-              {t('home.hero.title1')}<br />
-              <span className="text-purple-900">{t('home.hero.title2')}</span>
-            </h1>
-            <p className="text-purple-200 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
-              {t('home.hero.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <button
-                className="bg-purple-900 hover:bg-purple-800 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:scale-105 hover:shadow-xl text-sm"
-                onClick={e => { e.stopPropagation(); navigate('/test') }}
-              >
-                {t('home.hero.cta')}
-              </button>
-              <span className="text-purple-300 text-xs">{t('home.hero.time')}</span>
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center relative z-10">
+          {/* Badge */}
+          <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-5 py-2 rounded-full mb-6 tracking-wide border border-white/20">
+            <span>✨</span>
+            {t('home.badge')}
+          </span>
+
+          {/* Title */}
+          <h1 className="font-extrabold text-white leading-tight mb-4">
+            <span className="block text-2xl md:text-3xl font-semibold opacity-90 mb-1">{t('home.hero.title1')}</span>
+            <span className="block text-4xl md:text-6xl lg:text-7xl">{t('home.hero.title2')}</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-white/75 text-sm md:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            {t('home.hero.subtitle')}
+          </p>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <button
+              className="inline-flex items-center gap-2 text-white font-bold px-8 py-3.5 rounded-full transition-all hover:scale-105 hover:shadow-2xl text-sm"
+              style={{ background: 'linear-gradient(135deg, #e91e8c, #9c27b0)' }}
+              onClick={e => { e.stopPropagation(); navigate('/test') }}
+            >
+              <span>⛑️</span>
+              {t('home.hero.cta')}
+            </button>
+            <div className="flex items-center gap-3 text-white/60 text-xs">
+              <span className="flex items-center gap-1">📝 {t('home.hero.time')}</span>
+              <span>·</span>
+              <span className="flex items-center gap-1">⏱ {t('home.hero.duration')}</span>
             </div>
           </div>
+        </div>
 
 
         </div>
