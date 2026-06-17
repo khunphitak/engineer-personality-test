@@ -50,9 +50,9 @@ export default function Home() {
             <button
               className="inline-flex items-center gap-3 text-white font-bold px-8 py-4 rounded-2xl transition-all hover:scale-105 hover:brightness-110 text-base"
               style={{
-                background: 'linear-gradient(90deg, #1a0a40, #3b1580)',
-                border: '2px dashed #8b6fe0',
-                boxShadow: '0 0 20px rgba(124, 92, 224, 0.5)',
+                background: 'linear-gradient(90deg, #3a0080, #9b26cc, #d4209a)',
+                border: '2px dashed #c06fe0',
+                boxShadow: '0 0 24px rgba(180, 40, 180, 0.5)',
               }}
               onClick={e => { e.stopPropagation(); navigate('/test') }}
             >
