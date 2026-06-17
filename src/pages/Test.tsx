@@ -5,6 +5,7 @@ import { calculateScores } from '../utils/scoring'
 import { useLang } from '../context/LangContext'
 import LangToggle from '../components/LangToggle'
 import GearOption from '../components/GearOption'
+import testBg from '../assets/test-bg.png'
 
 const STORAGE_KEY = 'engineertype_answers'
 
@@ -153,7 +154,7 @@ export default function Test() {
   const questionText = lang === 'th' ? question.textTh : question.textEn
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-purple-50 to-indigo-100 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundImage: `url(${testBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Decorative corners */}
       <TopLeftCorner />
       <TopRightDots />
