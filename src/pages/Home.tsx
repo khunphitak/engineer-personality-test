@@ -23,6 +23,7 @@ export default function Home() {
           backgroundPosition: 'center',
           width: '100%',
           aspectRatio: '1765 / 891',
+          maxHeight: '891px',
         }}
         onClick={() => navigate('/test')}
       >
