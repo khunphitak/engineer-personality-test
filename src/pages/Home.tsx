@@ -62,9 +62,6 @@ export default function Home() {
           </div>
         </div>
 
-
-        </div>
-
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
