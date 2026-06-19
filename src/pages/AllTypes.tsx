@@ -4,6 +4,13 @@ import Footer from '../components/Footer'
 import { engineerTypes, localizeType } from '../data/types'
 import TypeAvatar from '../components/TypeAvatar'
 import { useLang } from '../context/LangContext'
+import cardArchitectBg from '../assets/card-architect-bg.png'
+import cardBuilderBg from '../assets/card-builder-bg.png'
+
+const cardBgMap: Record<string, string> = {
+  architect: cardArchitectBg,
+  builder: cardBuilderBg,
+}
 
 export default function AllTypes() {
   const navigate = useNavigate()
@@ -37,7 +44,9 @@ export default function AllTypes() {
               key={type.id}
               onClick={() => navigate(`/types/${type.id}`)}
               className="group relative overflow-hidden rounded-3xl text-white text-left hover:scale-[1.02] transition-all duration-200 hover:shadow-2xl"
-              style={{ background: `linear-gradient(135deg, ${type.color}, ${type.darkColor})` }}
+              style={cardBgMap[type.id]
+                ? { backgroundImage: `url(${cardBgMap[type.id]})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                : { background: `linear-gradient(135deg, ${type.color}, ${type.darkColor})` }}
             >
               <div className="p-8">
                 <div className="flex items-start justify-between gap-4">
