@@ -6,6 +6,7 @@ import { useLang } from '../context/LangContext'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import TypeAvatar from '../components/TypeAvatar'
+import cardArchitectBg from '../assets/card-architect-bg.png'
 
 const MOCK_COMMENTS = [
   { name: 'Alex Chen',   type: 'Architect', time: '2 days ago',   text: 'This is eerily accurate. The part about over-engineering hit close to home!' },
@@ -77,7 +78,9 @@ export default function Results() {
 
       {/* HERO */}
       <div className="relative overflow-hidden py-16 px-4"
-        style={{ background: `linear-gradient(135deg, ${type.darkColor}, ${type.color})` }}>
+        style={type.id === 'architect'
+          ? { backgroundImage: `url(${cardArchitectBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+          : { background: `linear-gradient(135deg, ${type.darkColor}, ${type.color})` }}>
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {type.traits.map(tr => (
