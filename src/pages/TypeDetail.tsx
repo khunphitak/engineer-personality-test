@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import TypeAvatar from '../components/TypeAvatar'
 import { getTypeById, engineerTypes, localizeType } from '../data/types'
 import { useLang } from '../context/LangContext'
+import cardArchitectBg from '../assets/card-architect-bg.png'
 
 export default function TypeDetail() {
   const { typeId } = useParams<{ typeId: string }>()
@@ -36,7 +37,9 @@ export default function TypeDetail() {
       {/* HERO */}
       <div
         className="relative overflow-hidden py-16 px-4"
-        style={{ background: `linear-gradient(135deg, ${type.darkColor}, ${type.color})` }}
+        style={type.id === 'architect'
+          ? { backgroundImage: `url(${cardArchitectBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+          : { background: `linear-gradient(135deg, ${type.darkColor}, ${type.color})` }}
       >
         <div className="absolute inset-0 opacity-10">
           <svg width="100%" height="100%" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice">
