@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { engineerTypes, localizeType } from '../data/types'
 import { useLang } from '../context/LangContext'
 import heroBg from '../assets/hero-bg.png'
+import cardArchitectBg from '../assets/card-architect-bg.png'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -142,7 +143,9 @@ export default function Home() {
             {types.map(type => (
               <button key={type.id} onClick={() => navigate(`/types/${type.id}`)}
                 className="group relative overflow-hidden rounded-2xl p-6 text-left text-white hover:scale-105 transition-all duration-200 hover:shadow-xl"
-                style={{ background: `linear-gradient(135deg, ${type.color}, ${type.darkColor})` }}>
+                style={type.id === 'architect'
+                  ? { backgroundImage: `url(${cardArchitectBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                  : { background: `linear-gradient(135deg, ${type.color}, ${type.darkColor})` }}>
                 <div className="text-xs font-bold tracking-widest opacity-70 mb-3">{type.code}</div>
                 <h3 className="text-2xl font-extrabold mb-2">{type.name}</h3>
                 <p className="text-sm opacity-80 leading-snug">{type.tagline}</p>
